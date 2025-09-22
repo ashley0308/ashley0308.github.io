@@ -161,7 +161,8 @@ body {
 .hero-cta {
   position: absolute;
   bottom: 9%;
-  left: 65%;
+  right: 10%;
+  flex-direction: row-reverse;
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
