@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paws Sitter</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Paws Sitter home">
+          <span class="brand-text" aria-hidden="true">
+            <span class="brand-top">Paws</span>
+            <span class="brand-bottom">Sitter</span>
+          </span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-controls="siteNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav id="siteNav" class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="availability.html">Availability</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section
+      style="padding: 0"
+      id="home"
+      class="hero"
+      aria-label="Happy dogs on a walk"
+    >
+      <img
+        class="hero-img"
+        src="./img/lots-of-dogs.jpg"
+        alt="Group of dogs being walked by handlers along a sunny park path"
+        width="1600"
+        height="900"
+      />
+      <!-- Buttons stay on the right via CSS .hero-cta positioning -->
+      <div class="container hero-cta">
+        <a class="btn btn-ghost" href="services.html">Book Now</a>
+        <a class="btn btn-ghost" href="services.html">See Services</a>
+      </div>
+    </section>
+
+    <main id="main">
+      <!-- About (kept on the homepage) -->
+      <section id="about" aria-labelledby="about-title">
+        <div class="container">
+          <h2 id="about-title" class="section-title">About Us</h2>
+          <div class="about">
+            <figure>
+              <img
+                src="./img/lots-of-dogs.jpg"
+                alt="Person sitting on the floor petting a relaxed dog and cat"
+                height="470"
+              />
+            </figure>
+            <div>
+              <p>
+                Laura Smith has loved animals her whole life. She grew up on her
+                family's farm, where she helped care for all kinds of pets and
+                even took in strays that needed a home. Because of that passion,
+                she decided to start her own pet sitting business called Paws
+                Sitter. Laura runs it with the help of two part time assistants
+                who are trained in pet safety and first aid, so clients know
+                their pets are in good care.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" aria-labelledby="services-title">
+        <div class="container">
+          <h2 id="services-title" class="section-title">Popular Services</h2>
+          <div class="grid grid-4">
+            <article class="card">
+              <span class="icon">🐾</span>
+              <h3>Dog Walking (30 minutes)</h3>
+              <p>Quick potty break and short walk to keep pups happy.</p>
+            </article>
+            <article class="card">
+              <span class="icon">🐾</span>
+              <h3>Dog Walking (60 minutes)</h3>
+              <p>Extended walk with play and enrichment for active dogs.</p>
+            </article>
+            <article class="card">
+              <span class="icon">🏠</span>
+              <h3>Drop In Visit (15–20 minutes)</h3>
+              <p>Feed, water refresh, and a little play or cuddle time.</p>
+            </article>
+            <article class="card">
+              <span class="icon">🏠</span>
+              <h3>Drop In Visit (30–45 minutes)</h3>
+              <p>Extra attention with more playtime and care for pets.</p>
+            </article>
+          </div>
+          </p>
+        </div>
+      </section>
+
+      <section id="reviews" aria-labelledby="reviews-title">
+        <div class="container">
+          <h2 id="reviews-title" class="section-title">Reviews</h2>
+          <div class="reviews">
+            <article class="review">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>
+                Laura treated our dog like family! We loved getting photo
+                updates every day.
+              </p>
+              <p class="who"><span class="avatar purple"></span>Sarah P.</p>
+            </article>
+            <article class="review">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>
+                Super reliable and caring. My two cats warmed up to her
+                quickly.
+              </p>
+              <p class="who"><span class="avatar blue"></span>James R.</p>
+            </article>
+            <article class="review">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>
+                Our senior dog needs daily meds, Laura handled it perfectly.
+              </p>
+              <p class="who"><span class="avatar pink"></span>Priya K.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <div class="foot-bottom">
+        <div class="container foot-bottom-row">
+          <span>© <span id="year"></span> Paws Sitter. All rights reserved.</span>
+          <div>
+            <a href="#" aria-label="Privacy Policy">Privacy Policy</a>
+            &nbsp;•&nbsp;
+            <a href="#" aria-label="Terms of Service">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const navBtn = document.getElementById("navToggle");
+      const nav = document.getElementById("siteNav");
+      navBtn?.addEventListener("click", () => {
+        const open = nav.classList.toggle("open");
+        navBtn.setAttribute("aria-expanded", String(open));
+      });
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

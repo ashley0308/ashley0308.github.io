@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paws Sitter – Availability</title>
+    <meta name="description" content="Check sitter availability." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Paws Sitter home"
+          ><span class="brand-text" aria-hidden="true"
+            ><span class="brand-top">Paws</span
+            ><span class="brand-bottom">Sitter</span></span
+          ></a
+        >
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-controls="siteNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="siteNav" class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li>
+              <a href="availability.html" aria-current="page">Availability</a>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section aria-labelledby="availability-title" class="pad-top">
+        <div class="container">
+          <h2 id="availability-title" class="section-title">Availability</h2>
+          <div class="calendar" style="--start: 4">
+            <div class="cal-head" aria-hidden="true">
+              <div class="cal-label">October 2025</div>
+            </div>
+            <div class="cal-grid" role="group" aria-label="Calendar">
+              <div class="cal-cell cal-dow">Sun</div>
+              <div class="cal-cell cal-dow">Mon</div>
+              <div class="cal-cell cal-dow">Tue</div>
+              <div class="cal-cell cal-dow">Wed</div>
+              <div class="cal-cell cal-dow">Thu</div>
+              <div class="cal-cell cal-dow">Fri</div>
+              <div class="cal-cell cal-dow">Sat</div>
+              <button class="cal-cell day" aria-label="Day 1">1</button
+              ><button class="cal-cell day">2</button
+              ><button class="cal-cell day">3</button
+              ><button class="cal-cell day">4</button
+              ><button class="cal-cell day">5</button
+              ><button class="cal-cell day">6</button
+              ><button class="cal-cell day">7</button>
+              <button class="cal-cell day">8</button
+              ><button class="cal-cell day">9</button
+              ><button class="cal-cell day">10</button
+              ><button class="cal-cell day">11</button
+              ><button class="cal-cell day">12</button
+              ><button class="cal-cell day">13</button
+              ><button class="cal-cell day">14</button>
+              <button class="cal-cell day">15</button
+              ><button class="cal-cell day">16</button
+              ><button class="cal-cell day">17</button
+              ><button class="cal-cell day">18</button
+              ><button class="cal-cell day">19</button
+              ><button class="cal-cell day">20</button
+              ><button class="cal-cell day">21</button>
+              <button class="cal-cell day">22</button
+              ><button class="cal-cell day">23</button
+              ><button class="cal-cell day">24</button
+              ><button class="cal-cell day">25</button
+              ><button class="cal-cell day">26</button
+              ><button class="cal-cell day">27</button
+              ><button class="cal-cell day">28</button>
+              <button class="cal-cell day">29</button
+              ><button class="cal-cell day">30</button
+              ><button class="cal-cell day">31</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      role="contentinfo"
+      style="position: fixed; left: 0; right: 0; bottom: 0; width: 100%"
+    >
+      <div class="foot-bottom">
+        <div class="container foot-bottom-row">
+          <span
+            >© <span id="year"></span> Paws Sitter. All rights reserved.</span
+          >
+          <div>
+            <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const navBtn = document.getElementById("navToggle");
+      const nav = document.getElementById("siteNav");
+      navBtn?.addEventListener("click", () => {
+        const open = nav.classList.toggle("open");
+        navBtn.setAttribute("aria-expanded", String(open));
+      });
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paws Sitter – Contact Us</title>
+    <meta name="description" content="Contact Paws Sitter." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Paws Sitter home"
+          ><span class="brand-text" aria-hidden="true"
+            ><span class="brand-top">Paws</span
+            ><span class="brand-bottom">Sitter</span></span
+          ></a
+        >
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-controls="siteNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="siteNav" class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="availability.html">Availability</a></li>
+            <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section aria-labelledby="contact-title" class="pad-top">
+        <div class="container">
+          <h2 id="contact-title" class="section-title">Contact Us</h2>
+          <form
+            class="contact"
+            id="contactForm"
+            aria-describedby="privacy-note"
+          >
+            <div class="form-grid">
+              <div>
+                <label for="name">Your Name</label
+                ><input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email">Email</label
+                ><input
+                  id="email"
+                  name="email"
+                  type="email"
+                  inputmode="email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <div class="span-2">
+                <label for="message">Message</label
+                ><textarea
+                  id="message"
+                  name="message"
+                  rows="10"
+                  maxlength="1000"
+                ></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+            <span id="formStatus" aria-live="polite" class="form-status"></span>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      role="contentinfo"
+      style="position: fixed; left: 0; right: 0; bottom: 0; width: 100%"
+    >
+      <div class="foot-bottom">
+        <div class="container foot-bottom-row">
+          <span
+            >© <span id="year"></span> Paws Sitter. All rights reserved.</span
+          >
+          <div>
+            <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const navBtn = document.getElementById("navToggle");
+      const nav = document.getElementById("siteNav");
+      navBtn?.addEventListener("click", () => {
+        const open = nav.classList.toggle("open");
+        navBtn.setAttribute("aria-expanded", String(open));
+      });
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
