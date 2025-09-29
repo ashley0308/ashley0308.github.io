@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1" >
-    <title>Paws Sitter – Availability</title>
-    <meta name="description" content="Check sitter availability." >
-    <link rel="stylesheet" href="./styles.css" >
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paws Sitter – Contact</title>
+    <meta
+      name="description"
+      content="Contact Paws Sitter for questions, bookings, or availability."
+    />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header" >
+    <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Paws Sitter home"
-          ><span class="brand-text" aria-hidden="true"
-            ><span class="brand-top">Paws</span
-            ><span class="brand-bottom">Sitter</span></span
-          ></a
-        >
+        <a class="brand" href="index.html" aria-label="Paws Sitter home">
+          <span class="brand-text" aria-hidden="true">
+            <span class="brand-top">Paws</span
+            ><span class="brand-bottom">Sitter</span>
+          </span>
+        </a>
         <button
           class="nav-toggle"
           id="navToggle"
@@ -40,36 +43,33 @@
     <main id="main">
       <section aria-labelledby="contact-title" class="pad-top">
         <div class="container">
-          <h2 id="contact-title" class="section-title">Contact Us</h2>
-          <form
-            class="contact"
-            id="contactForm"
-          >
+          <h1 id="contact-title" class="section-title">Contact Us</h1>
+          <form class="contact" id="contactForm">
             <div class="form-grid">
               <div>
-                <label for="name">Your Name</label
-                ><input
+                <label for="name">Your Name</label>
+                <input
                   id="name"
                   name="name"
                   type="text"
                   autocomplete="name"
                   required
-                >
+                />
               </div>
               <div>
-                <label for="email">Email</label
-                ><input
+                <label for="email">Email</label>
+                <input
                   id="email"
                   name="email"
                   type="email"
                   inputmode="email"
                   autocomplete="email"
                   required
-                >
+                />
               </div>
               <div class="span-2">
-                <label for="message">Message</label
-                ><textarea
+                <label for="message">Message</label>
+                <textarea
                   id="message"
                   name="message"
                   rows="10"
@@ -84,9 +84,7 @@
       </section>
     </main>
 
-    <footer
-      style="position: fixed; left: 0; right: 0; bottom: 0; width: 100%"
-    >
+    <footer>
       <div class="foot-bottom">
         <div class="container foot-bottom-row">
           <span
@@ -98,6 +96,7 @@
         </div>
       </div>
     </footer>
+
     <script>
       const navBtn = document.getElementById("navToggle");
       const nav = document.getElementById("siteNav");
